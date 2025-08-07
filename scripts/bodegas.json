@@ -1,0 +1,122 @@
+{
+  "B4": {
+    "nombre": "Bodega 4",
+    "superficie": "1,027.81",
+    "precio": "$14,903,245",
+    "enganche": "$4,470,974",
+    "isSell": false,
+    "mensualidad": "$869,356"
+  },
+  "B5": {
+    "nombre": "Bodega 5",
+    "superficie": "1,014.27",
+    "precio": "$14,706,915",
+    "enganche": "$4,412,075",
+    "isSell": false,
+    "mensualidad": "$857,903"
+  },
+  "B6": {
+    "nombre": "Bodega 6",
+    "superficie": "1,000.72",
+    "precio": "$14,510,440",
+    "enganche": "$4,535,132",
+    "isSell": false,
+    "mensualidad": "$846,442"
+  },
+  "B7": {
+    "nombre": "Bodega 7",
+    "superficie": "1,027.81",
+    "precio": "$14,314,110",
+    "enganche": "$4,294,233",
+    "isSell": false,
+    "mensualidad": "$834,990"
+  },
+  "B8": {
+    "nombre": "Bodega 8",
+    "superficie": "973.64",
+    "precio": "$14,117,780",
+    "enganche": "$4,235,334",
+    "isSell": false,
+    "mensualidad": "$823,537"
+  },
+  "B9": {
+    "nombre": "Bodega 9",
+    "superficie": "960.09",
+    "precio": "$13,921,305",
+    "enganche": "$4,176,392",
+    "isSell": false,
+    "mensualidad": "$812,076"
+  },
+  "B10": {
+    "nombre": "Bodega 10",
+    "superficie": "946.55",
+    "precio": "$13,724,975",
+    "enganche": "$4,117,493",
+    "isSell": false,
+    "mensualidad": "$800,624"
+  },
+  "B11": {
+    "nombre": "Bodega 11",
+    "superficie": "933.02",
+    "precio": "$14,500",
+    "enganche": "$4,058,637",
+    "isSell": false,
+    "mensualidad": "$789,179"
+  },
+  "B12": {
+    "nombre": "Bodega 12",
+    "superficie": "919.46",
+    "precio": "$13,332,170",
+    "enganche": "$3,999,651",
+    "isSell": false,
+    "mensualidad": "$777,710"
+  },
+  "B13": {
+    "nombre": "Bodega 13",
+    "superficie": "906.00",
+    "precio": "$13,137,000",
+    "enganche": "$3,941,100",
+    "isSell": false,
+    "mensualidad": "$766,325"
+  },
+  "B14": {
+    "nombre": "Bodega 14",
+    "superficie": "892.38",
+    "precio": "$12,939,510",
+    "enganche": "$3,881,853",
+    "isSell": false,
+    "mensualidad": "$754,805"
+  },
+  "B15": {
+    "nombre": "Bodega 15",
+    "superficie": "878.84",
+    "precio": "$12,743,180",
+    "enganche": "$3,822,954",
+    "isSell": false,
+    "mensualidad": "$743,352"
+  },
+  "B16": {
+    "nombre": "Bodega 16",
+    "superficie": "865.29",
+    "precio": "$12,546,705",
+    "enganche": "$3,764,012",
+    "isSell": false,
+    "mensualidad": "$731,891"
+  },
+  "B17": {
+    "nombre": "Bodega 17",
+    "superficie": "851.76",
+    "precio": "$12,350,520",
+    "enganche": "$3,705,156",
+    "isSell": false,
+    "mensualidad": "$720,447"
+  },
+  "B19": {
+    "nombre": "Bodega 19",
+    "superficie": "824.69",
+    "precio": "$11,958,005",
+    "enganche": "$3,587,402",
+    "isSell": false,
+    "mensualidad": "$697,550"
+  }
+}
