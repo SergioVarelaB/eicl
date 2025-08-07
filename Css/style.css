@@ -71,7 +71,7 @@ body {
 
 /* Encabezado */
 header {
-  /* background: url('../assets/background1.png') no-repeat top center; */
+  /* background: url('assets/background1.png') no-repeat top center; */
   position: relative;
   background-blend-mode: multiply;
   background-position: center;
@@ -332,7 +332,7 @@ p {
 
 
 .compromise {
-  background: url('../assets/background2.png') no-repeat top center;
+  background: url('assets/background2.png') no-repeat top center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -431,7 +431,7 @@ section {
 }
 
 .letters {
-  background-image: url("../assets/ubicacion/Ellipse.svg");
+  background-image: url("assets/ubicacion/Ellipse.svg");
   background-repeat: no-repeat;
   background-position: center;
   height: 42px;
