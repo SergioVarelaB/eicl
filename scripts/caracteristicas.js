@@ -5,6 +5,7 @@ knowMore = document.getElementById("knowMore");
 offsetHeight = obtenerAnchoOculto('.hidden-content')
 alturaAbierto = `${divContainer.scrollHeight + offsetHeight + 20}px`;
 alturaCerrado = `${divContainer.scrollHeight}px`;
+divContainer.style.maxHeight = alturaCerrado
 
 showMoreBtn.addEventListener('click', () => {
     console.log(`${divContainer.scrollHeight} + ${offsetHeight} + 20`)
