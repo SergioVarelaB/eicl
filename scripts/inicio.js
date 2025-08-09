@@ -82,3 +82,19 @@ function closeModal() {
     document.querySelector('.jw-modal.open').classList.remove('open');
     document.body.classList.remove('jw-modal-open');
 }
+
+
+observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      // Cuando el elemento sale de la pantalla, quitamos la clase para poder repetir la animación
+      entry.target.classList.remove('visible');
+    }
+  });
+});
+
+document.querySelectorAll('.aparecer-dinamico-cards').forEach(el => {
+  observer.observe(el);
+});

@@ -17,7 +17,7 @@ showMoreBtn.addEventListener('click', () => {
     } else {
         knowMore.textContent = " Conoce más características "
         showMoreBtn.style.transform = 'rotate(0deg)';
-        divContainer.style.maxHeight = '40vh'
+        divContainer.style.maxHeight = '38vh'
         toogleHiddeenElements()
     }
 });
@@ -27,3 +27,17 @@ function toogleHiddeenElements(){
         elemento.classList.toggle('visible');
     });
 }
+
+
+
+observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } 
+  });
+});
+
+document.querySelectorAll('.aparecer-dinamico-cards').forEach(el => {
+  observer.observe(el);
+});

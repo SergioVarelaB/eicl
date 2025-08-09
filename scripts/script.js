@@ -58,7 +58,7 @@ function switchBackground(pagina) {
     case 'contacto':
       cambiarFondoHeader('assets/Banners/contact.png', '40vh')
       break;
-    case 'caracterizticas':
+    case 'caracteristicas':
       cambiarFondoHeader('assets/Banners/characteristics.png', '40vh')
       break;
     case 'ubicacion':
