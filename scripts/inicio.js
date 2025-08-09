@@ -20,30 +20,6 @@ window.addEventListener('load', function () {
 });
 bodegasInfo = {};
 
-
-
-// // Cargar JSON externo primero
-// fetch("scripts/bodegas.json")
-//     .then(res => res.json())
-//     .then(data => {
-//       bodegasInfo = data;
-//       console.log(bodegasInfo);
-//       return fetch("assets/Bodegas/bodegas.svg")
-//     })
-//     .then(res => res.text())
-//     .then(svg => {
-//         document.getElementById("contenedor-svg").innerHTML = svg;
-
-//         const idsZonas = Object.keys(bodegasInfo);
-
-//         idsZonas.forEach((id) => {
-//             document.getElementById(id).addEventListener("click", () => {
-//                 openModal("modal-1", id);
-//             });
-//         });
-
-//     });
-
 // open modal by id
 function openModal(id, id_bodega) {
     document.getElementById(id).classList.add('open');

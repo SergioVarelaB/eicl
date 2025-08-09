@@ -23,13 +23,13 @@ a {
   overflow: hidden;
 }
 
-a::after {
+header a::after {
   opacity: 1;
   transform: translate3d(-101%, 0, 0);
 }
 
-a:hover::after,
-a:focus::after {
+header a:hover::after,
+header a:focus::after {
   transform: translate3d(0, 0, 0);
 }
 
@@ -101,7 +101,7 @@ nav ul li {
   margin: 0;
 }
 
-nav ul li a {
+#header ul li a {
   display: block;
   color: white;
   text-decoration: none;
@@ -266,9 +266,41 @@ a:focus::after {
 }
 
 
+
+p {
+  display: contents;
+}
+
+
+
+.cards-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 8vw;
+    padding-top: 9vh;
+    padding-bottom: 14vh;
+    max-width: 63vw;
+    margin: auto;
+}
+
 /* Responsive */
-@media (max-width: 600px) {
-  .footer-bar {
+@media (max-width: 1000px) {
+  .cards-section {
+    flex-direction: column;
+  }
+  nav ul {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.logoImage {
+  height: 10vh;
+  width: 20vw;
+}
+
+.navContainer {flex-direction: column;}
+
+.footer-bar {
     flex-direction: column;
     text-align: center;
     gap: 10px;
@@ -277,10 +309,6 @@ a:focus::after {
   .bar-right {
     text-align: center;
   }
-}
-
-/* Responsive */
-@media (max-width: 600px) {
   .footer {
     flex-direction: column;
   }
@@ -289,24 +317,9 @@ a:focus::after {
     flex-direction: column;
     gap: 20px;
   }
+
 }
 
-
-p {
-  display: contents;
-}
-
-
-
-
-.cards-section {
-  display: flex;
-  justify-content: space-between;
-  gap: 10rem;
-  padding: 40px;
-  max-width: 63vw;
-  margin: auto;
-}
 
 
 .card {
@@ -431,7 +444,7 @@ section {
 }
 
 .letters {
-  background-image: url("assets/ubicacion/Ellipse.svg");
+  background-image: url("../assets/ubicacion/Ellipse.svg");
   background-repeat: no-repeat;
   background-position: center;
   height: 42px;
@@ -600,6 +613,7 @@ section {
   justify-content: center;
   /* flex-direction: row; */
   margin: auto;
+  padding: 4vh;
 }
 
 /* Estilo de cada miniatura */
@@ -679,3 +693,29 @@ section {
     display: block;
     opacity: 1;
 }
+
+  /* Estilo del botón flotante */
+  .whatsapp-fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    background-image: url('../assets/whatsap.webp') ;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    z-index: 1000;
+  }
+
+  .whatsapp-fab:hover {
+    transform: scale(1.1);
+    background-color: #1ebe5b;
+  }
