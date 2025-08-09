@@ -122,7 +122,6 @@ async function getLastUpdate() {
   try {
     response = await fetch(API_LASTUPDATE);
     data = await response.json();
-    console.log(data.items[0].fields.lastUpdate)
     document.getElementById("lastUpdate").innerHTML = `<span style="color: #8DD140; font-weight: bold;">Actualización avance de construcción:</span> ${data.items[0].fields.lastUpdate}`
     return data.items[0].fields.lastUpdate
   } catch (error) {

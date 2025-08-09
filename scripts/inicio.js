@@ -45,7 +45,7 @@ async function getBodegasInfo() {
 
   } catch (error) {
     console.error("Error al obtener las imágenes de Contentful:", error);
-    mainImageElement.alt = "Error al cargar la galería.";
+    mainImageElement.alt = "Error al cargar la info.";
   }
 }
 

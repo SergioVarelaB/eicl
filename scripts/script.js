@@ -17,8 +17,6 @@ function navegar(pagina, botonClicado) {
 
       switchBackground(pagina)
 
-
-
       // Quitar clase 'activo' de todos los botones
       document.querySelectorAll("nav ul li a").forEach(btn => btn.classList.remove("activo"));
 
@@ -32,6 +30,8 @@ function navegar(pagina, botonClicado) {
       } else {
         document.querySelector(".navContainer").style.maxWidth = '60vw'
       }
+      // Luego mandas scroll arriba
+      window.scrollTo(0, 0);
     })
     .catch(error => {
       document.getElementById("contenido").innerHTML = `<p>${error.message}</p>`;

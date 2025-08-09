@@ -1,29 +1,29 @@
 showMoreBtn = document.getElementById("showMoreBtn");
-card = document.querySelector('.cardCaracterizticas');
 hiddenContent = document.querySelectorAll('.hidden-content');
+divContainer = document.getElementById('cardIcons');
+knowMore = document.getElementById("knowMore");
 
-// Inicialmente, guarda la altura de la tarjeta sin el contenido oculto
-//  initialHeight = card.offsetHeight;
 
 showMoreBtn.addEventListener('click', () => {
-    console.log("vn dskvndkjndcjk")
-    // Muestra el contenido oculto y la tarjeta se expandirá
+
+    if (knowMore.textContent == " Conoce más características ") {
+        showMoreBtn.style.transform = 'rotate(180deg)';
+        knowMore.textContent = "Ver menos"
+        divContainer.style.maxHeight = '70vh';
+        setTimeout(() => {
+        // Muestra el contenido oculto
+        toogleHiddeenElements()
+        }, 170); // 1000 ms = 1s
+    } else {
+        knowMore.textContent = " Conoce más características "
+        showMoreBtn.style.transform = 'rotate(0deg)';
+        divContainer.style.maxHeight = '40vh'
+        toogleHiddeenElements()
+    }
+});
+
+function toogleHiddeenElements(){
     hiddenContent.forEach(elemento => {
         elemento.classList.toggle('visible');
     });
-
-
-    if (hiddenContent[0].classList.contains('visible')){
-        showMoreBtn.style.transform = 'rotate(180deg)';
-        document.getElementById("knowMore").textContent = "Ver menos"
-    }else{
-        document.getElementById("knowMore").textContent = "Conoce más características"
-        showMoreBtn.style.transform = 'rotate(0deg)';
-    }
-
-
-    // Pequeño delay para que la transición de altura se active
-    setTimeout(() => {
-        card.style.height = 'auto';
-    }, 1);
-});
+}
