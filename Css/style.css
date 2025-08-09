@@ -281,6 +281,7 @@ p {
     padding-bottom: 14vh;
     max-width: 63vw;
     margin: auto;
+    justify-content: center;
 }
 
 /* Responsive */
