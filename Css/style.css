@@ -419,8 +419,7 @@ section {
   padding: 5rem;
   border-radius: 2rem;
   border: 1px solid #D9D9D9;
-  transition: transform 0.2s  height 1s ease-in-out;
-  /* transition: max-height 1s ease;  */
+  transition: max-height 2s ease;
   padding-top: 5rem;
   justify-content: space-around;
   text-align: center;
@@ -428,7 +427,6 @@ section {
   padding-bottom: 5rem;
   margin: auto;
   max-width: 60vw;
-  max-height: 37vh;
 }
 
   .cardCaracteristicas.activo {
@@ -686,13 +684,15 @@ section {
     /* Estado inicial: Oculto */
     display: none;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s;
 }
 
 .hidden-content.visible {
     /* Estado final: Visible */
     display: block;
     opacity: 1;
+    transition: ease-in 0.5s;
+    animation-delay: 1s;
 }
 
 .card.expanded .hidden-content {
