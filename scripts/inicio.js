@@ -7,7 +7,7 @@ CONTENT_TYPE_ID = "infoBodegas";
 
 // URL para hacer la petición a la API de Contentful
 API_URL = `https://cdn.contentful.com/spaces/${SPACE_ID}/environments/master/entries?access_token=${ACCESS_TOKEN}&content_type=${CONTENT_TYPE_ID}`;
-
+API_VIDEO = `https://cdn.contentful.com/spaces/${SPACE_ID}/environments/master/entries?access_token=${ACCESS_TOKEN}&content_type=videoGalleryHome`;
 
 
 window.addEventListener('load', function () {
@@ -98,3 +98,23 @@ observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.aparecer-dinamico-cards').forEach(el => {
   observer.observe(el);
 });
+
+
+async function getGalleryVideo() {
+  try {
+    response = await fetch(API_VIDEO);
+    data = await response.json();
+
+    publicID = data.items[0].fields.publicId;
+    // assets = data.includes.fields;
+    console.log(publicID)
+    url = `https://player.cloudinary.com/embed/?cloud_name=ecil&public_id=${publicID}&profile=cld-default`
+    document.getElementById("video-gallery").src = url
+
+  } catch (error) {
+    console.error("Error al obtener el video de Contentful:", error);
+    mainImageElement.alt = "Error al cargar la galería.";
+  }
+}
+
+getGalleryVideo();

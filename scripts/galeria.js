@@ -8,6 +8,7 @@ CONTENT_TYPE_ID = "imagenGaleria";
 // URL para hacer la petición a la API de Contentful
 API_URL = `https://cdn.contentful.com/spaces/${SPACE_ID}/environments/master/entries?access_token=${ACCESS_TOKEN}&content_type=${CONTENT_TYPE_ID}`;
 API_LASTUPDATE = `https://cdn.contentful.com/spaces/${SPACE_ID}/environments/master/entries?access_token=${ACCESS_TOKEN}&content_type=lastUpdate`;
+API_VIDEO = `https://cdn.contentful.com/spaces/${SPACE_ID}/environments/master/entries?access_token=${ACCESS_TOKEN}&content_type=videoGallery`;
 
 
 // Elementos del DOM
@@ -96,6 +97,23 @@ async function getGalleryImages() {
   }
 }
 
+async function getGalleryVideo() {
+  try {
+    response = await fetch(API_VIDEO);
+    data = await response.json();
+
+    publicID = data.items[0].fields.publicId;
+    // assets = data.includes.fields;
+    console.log(publicID)
+    url = `https://player.cloudinary.com/embed/?cloud_name=ecil&public_id=${publicID}&profile=cld-default`
+    document.getElementById("video-gallery").src = url
+
+  } catch (error) {
+    console.error("Error al obtener el video de Contentful:", error);
+    mainImageElement.alt = "Error al cargar la galería.";
+  }
+}
+
 // Función para renderizar las miniaturas
 function renderThumbnails() {
   thumbnailsContainer.innerHTML = ""; // Limpia el contenedor de miniaturas
@@ -133,3 +151,5 @@ getLastUpdate()
 
 // Inicia el proceso al cargar la página
 getGalleryImages();
+
+getGalleryVideo();
