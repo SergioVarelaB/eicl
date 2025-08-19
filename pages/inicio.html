@@ -1,4 +1,5 @@
-<section class = "aparecer-dinamico" style="font-size: 48px; margin: auto; max-width: 60rem; display: grid; justify-items: center; padding: 10rem;">
+<section class="aparecer-dinamico"
+    style="font-size: 48px; margin: auto; max-width: 60rem; display: grid; justify-items: center; padding: 10rem;">
     <img src="assets/lilLogo.svg" alt="Logo" />
 
     <p>Somos tu socio confiable en la <span style="color: #8DD140; font-weight: bold;"> protección y resguardo de bienes
@@ -17,7 +18,8 @@
     </div>
     <div class="card aparecer-dinamico-cards">
         <img src="assets/icons-home/safeBox.svg" alt="Logo" />
-        <p style="display: block;">Garantizamos <span style="font-weight: bold;">protección óptima</span> de tus pertenencias.</p>
+        <p style="display: block;">Garantizamos <span style="font-weight: bold;">protección óptima</span> de tus
+            pertenencias.</p>
     </div>
 </section>
 
@@ -41,16 +43,8 @@
 
 <section class="video">
     <!-- <img src="assets/background2.png" style=""> -->
-     <iframe
-     id = "video-gallery"
-  style="max-width: 95vw;"
-  width="1120"
-  height="630" 
-  style="height: auto; width: 100%;"
-  allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-  allowfullscreen
-  frameborder="0"
-></iframe>
+    <iframe id="video-gallery" style="max-width: 95vw;" width="1120" height="630" style="height: auto; width: 100%;"
+        allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen frameborder="0"></iframe>
 
 </section>
 
@@ -61,12 +55,18 @@
 
     <div id="contenedor-svg" style="margin: auto;"></div>
 
-    <p style="color: #FFFFFF; font-size: 10px; margin: auto; padding-top: 5vh; display: block;"> *Da click en la bodega para conocer
+    <p style="color: #FFFFFF; font-size: 10px; margin: auto; padding-top: 5vh; display: block;"> *Da click en la bodega
+        para conocer
         el precio y el plan de pagos </p>
 
 
-    <img style="margin: auto; max-width: 400px; padding-top: 5vh;" src="assets/status.png"/>
+    <img style="margin: auto; max-width: 400px; padding-top: 5vh; padding-bottom: 5vh; " src="assets/status.png" />
 
+    <div style="flex: none; background-color: #363636; max-width: 20vw;" class="cardCaracteristicasModal">
+        <h3 style="color: #FFFFFF; font-size: 24px; margin: 5px;">Conoce más sobre planes
+            de financiamiento con:</h3>
+        <a href="https://hircasa.com/" target="_blank"><img src="assets/icons-home/LogoHIR.png" alt="Logo" /></a>
+    </div>
 </section>
 
 
@@ -74,23 +74,41 @@
 <div id="modal-1" class="jw-modal">
     <div class="jw-modal-body">
         <img src="assets/lilLogo.svg" alt="Logo" style="padding-top: 2rem;" />
-        <h3 id="nameBodega" style="color: black; font-size: 38px; margin: 10px;">Bodega </h3>
-        <h3 style="color: black; font-size: 28px; margin: 10px; display: ruby;"><span
+        <h3 id="nameBodega" style="color: black; font-size: 30px; margin: 5px;">Bodega </h3>
+        <h3 style="color: black; font-size: 20px; margin: 5px; display: ruby;"><span
                 style="color: #8DD140; font-weight: bold;">Superficie de: </span>
             <p id="superficie"></p>
         </h3>
         <div style="flex: none;" class="cardCaracteristicasModal">
-            <h3 style="color: black; font-size: 28px; margin: 10px;">Precio de Venta</h3>
-            <h3 style="margin: 10px;" id="precio"> $ </h3>
+            <h3 style="color: black; font-size: 20px; margin: 5px;">Precio de Venta</h3>
+            <h3 style="margin: 10px; font-weight: normal;" id="precio"> $ </h3>
         </div>
 
-        <div style="flex: none;" class="cardCaracteristicasModal">
-            <h3 style="color: black; font-size: 28px; margin: 10px;">Plan de pagos:</h3>
-            <h3 style="display: ruby;"><span style="font-weight: bold;">Enganche: </span>
-            <p id="enganche"> $ </p></h3>
-            <br>
-            <h3 style="display: ruby;"><span style="font-weight: bold;">Mensualidades de 12 meses de:</span>
-            <p id="mensualidad">$</p></h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+            <div class="cardCaracteristicasModal" style="flex: none;">
+                <h3 style="color: black; font-size: 20px; margin: 5px;">Plan de pagos:</h3>
+                <h3 style="font-weight: normal; margin: 1vh;">
+                    <span style="font-weight: bold;">Enganche: </span>
+                    <span id="enganche">$</span>
+                </h3>
+                <h3 style="font-weight: normal; margin: 1vh;">
+                    <span style="font-weight: bold;">Mensualidades de 12 meses de:</span>
+                    <span id="mensualidad">$</span>
+                </h3>
             </div>
+
+            <div class="cardCaracteristicasModal" style="flex: none; display: grid; place-items: center;">
+                <h3 style="color: black; font-size: 20px; margin: 5px;">Plan de pagos con:</h3>
+                <a href="https://hircasa.com/" target="_blank">
+                    <img src="assets/icons-home/LogoHIRColor.png" alt="Logo" />
+                </a>
+                <h3 style="margin: 1vh; font-weight: normal;">
+                    <span style="font-weight: bold;">Mensualidades de </span> $139,000 MXN
+                </h3>
+                <h3 style="margin: 1vh;">
+                    <span style="font-weight: bold;">Hasta 10 años a pagar</span>
+                </h3>
+            </div>
+        </div>
     </div>
 </div>
